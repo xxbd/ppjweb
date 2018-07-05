@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ppjweb:war">
+    <output-path>$PROJECT_DIR$/../ppjweb/target</output-path>
+    <root id="archive" name="ppjweb.war">
+      <element id="artifact" artifact-name="ppjweb:war exploded" />
+    </root>
+  </artifact>
+</component>
