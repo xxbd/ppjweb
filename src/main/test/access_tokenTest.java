@@ -29,8 +29,8 @@ public class access_tokenTest {
     }
     public static void main(String[] args) {
         AccessToken accessToken = WeiXingUtils.getToken();
-/*        System.out.println(accessToken.getAccess_token()+"票据");
-        System.out.println(accessToken.getExpires_in()+"时间");
+       System.out.println(accessToken.getAccess_token()+"票据");
+       /*   System.out.println(accessToken.getExpires_in()+"时间");
         String media_id ="上传失败";
         try {
             media_id = WeiXingUtils.upload("C:/Users/admin/Desktop/picture/timg.jpg", accessToken.getAccess_token(), "image");
@@ -41,7 +41,7 @@ public class access_tokenTest {
         System.out.println(media_id);*/
         String menu = JSONObject.fromObject(WeiXingUtils.initMenu()).toString();
         System.out.println("menu是"+menu);
-        //int result = WeiXingUtils.deleteMenu(accessToken.getAccess_token());
+        int resul = WeiXingUtils.deleteMenu(accessToken.getAccess_token());
         int result =WeiXingUtils.createMenu(accessToken.getAccess_token(),menu);
         JSONObject jsonObject = WeiXingUtils.selectMenu(accessToken.getAccess_token());
         System.out.println(jsonObject.toString());
